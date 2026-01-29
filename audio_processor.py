@@ -43,14 +43,14 @@ class AudioProcessor:
             )
             
             self.audio_data = audio_data
-            self.sample_rate = sample_rate
+            self.sample_rate = int(sample_rate)
             
             print(f"Audio loaded successfully:")
             print(f"  - Duration: {len(audio_data) / sample_rate:.2f} seconds")
             print(f"  - Sample rate: {sample_rate} Hz")
             print(f"  - Samples: {len(audio_data)}")
             
-            return audio_data, sample_rate
+            return audio_data, int(sample_rate)
             
         except Exception as e:
             raise ValueError(f"Error loading audio file: {str(e)}")

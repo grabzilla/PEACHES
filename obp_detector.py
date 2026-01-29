@@ -105,7 +105,7 @@ class OBPDetector:
         
         # Find the maximum peak
         peak_idx = np.argmax(search_range)
-        period = peak_idx + self.min_lag
+        period = int(peak_idx) + self.min_lag
         
         # Check if peak is significant enough
         if search_range[peak_idx] < 0.1:  # Threshold for peak significance
