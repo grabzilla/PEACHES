@@ -131,8 +131,11 @@ def main():
     
     time_stamps, frequencies = obp_detector.detect_pitch(processed_audio)
     
-    # Smooth pitch contour
-    smoothed_frequencies = obp_detector.smooth_pitch_contour(frequencies, window_size=5)
+    # Smooth pitch contour (unless disabled)
+    if not args.no_smooth:
+        smoothed_frequencies = obp_detector.smooth_pitch_contour(frequencies, window_size=5)
+    else:
+        smoothed_frequencies = frequencies
     
     # Count voiced frames
     voiced_frames = sum(1 for f in smoothed_frequencies if f > 0)
