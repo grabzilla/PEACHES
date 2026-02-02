@@ -8,7 +8,7 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from obp_detector import OBPDetector
+from peaches.obp_detector import OBPDetector
 
 
 def generate_sine_wave(frequency, duration, sample_rate=44100):

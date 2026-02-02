@@ -89,6 +89,29 @@ The project follows a modular, object-oriented design:
 - `visualizer.py`: Pitch and MIDI visualization
 - `main.py`: CLI entry point
 
+## Files
+
+- `test_melody.wav`: A synthetic melody generated for testing (C-D-E-F-G-A-G-F-E-D-C scale)
+- `demo_output.mid`: MIDI file generated from the test melody
+- `demo_visualization.png`: Visualization showing pitch contour and detected MIDI notes
+
+## Try It Yourself
+
+To generate your own examples:
+
+```bash
+# Generate a new demo
+python demo.py
+
+# Convert your own audio file
+python main.py your_recording.wav --visualize --save-plots
+```
+
+The demo will create:
+- A test audio file with a simple melody
+- A MIDI conversion of that melody
+- Visualization plots showing the pitch detection and note extraction
+
 ## Example
 
 ```bash

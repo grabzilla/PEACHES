@@ -5,11 +5,11 @@ Generates a synthetic melody and converts it to MIDI.
 
 import numpy as np
 import soundfile as sf
-from audio_processor import AudioProcessor
-from noise_reducer import NoiseReducer
-from obp_detector import OBPDetector
-from midi_converter import MIDIConverter
-from visualizer import Visualizer
+from peaches.audio_processor import AudioProcessor
+from peaches.noise_reducer import NoiseReducer
+from peaches.obp_detector import OBPDetector
+from peaches.midi_converter import MIDIConverter
+from peaches.visualizer import Visualizer
 
 
 def generate_test_melody():

@@ -8,8 +8,8 @@ import os
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from obp_detector import OBPDetector
-from midi_converter import MIDIConverter
+from peaches.obp_detector import OBPDetector
+from peaches.midi_converter import MIDIConverter
 
 
 def test_frequency_to_midi_conversion():
